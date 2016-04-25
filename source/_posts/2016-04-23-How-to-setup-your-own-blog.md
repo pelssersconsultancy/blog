@@ -1,5 +1,12 @@
-# How to setup your own blog
-
+title: How to setup your own blog with Github Pages and Hexo
+date: 2016-04-08 22:54:02
+categories:
+- Tutorials
+tags:
+- Hexo
+- Github 
+- Markdown
+---
 ### 1. Create a new github account
 
  Navigate to [Github] and click the Signup button. It is important to choose the same 
