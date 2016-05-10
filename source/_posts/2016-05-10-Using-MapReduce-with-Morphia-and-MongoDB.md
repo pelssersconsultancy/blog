@@ -7,6 +7,8 @@ tags:
  - MapReduce
 ---
 
+ {% asset_img mapreduce-mongodb.jpg Map Reduce MongoDB %} 
+
 ### 1. Precondition
 
 You have a database called **HELLOWORLD** with 1 collection called **Person** containing following documents:
