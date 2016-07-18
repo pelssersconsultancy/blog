@@ -8,8 +8,9 @@ tags:
 
 ### 1. Context
 
-Suppose you have several projects in your workspace and you were wondering which projects are depending on 
-a specific version of a maven dependency, this article will show you how to solve this from the command line.
+You have several projects in your workspace and you were wondering which projects are depending on a specific version of a maven dependency. 
+
+This article will show you how to solve this from the command line.
 
 ### 2. Generating Maven Tree
 
@@ -69,6 +70,7 @@ robbypelssers1@Macbook-Robby-Pelssers:~/Documents/pelssers/javaslang$ find . -na
 ### 5. Pipe the search results (pom files) as input for generating dependeny tree
 
 Ideally we want to pipe all pom's as input for generating the maven dependency tree and next filter on the specific dependency.
+
 The problem is you will ony output something like
 
 ```
@@ -77,9 +79,9 @@ The problem is you will ony output something like
 
 So we still don't now what file lead to this output printed to the shell.
 
-We can however use following little trick.  We basically first find all pom files, next we first make sure to print which one we
-are processing. Next we execute inside the folder of the respective pom the maven dependency tree command. Now we need to make
-sure we both grep for lines containing  'Processing' AND also lines containing our maven dependency.
+We can however use following little trick.  We basically first find all pom files, next we first make sure to print which one we are processing. Next we execute inside the folder of the respective pom the maven dependency tree command. 
+
+Now we need to make sure we both grep for lines containing  'Processing' AND also lines containing our maven dependency.
 
 ```
 javaslang$ find . -name pom.xml -exec echo 'Processing  {}' \;  -execdir  mvn -f {} dependency:tree \; | grep "org.hamcrest:hamcrest-core:jar:1.3\|Processing"
