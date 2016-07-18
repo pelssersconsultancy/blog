@@ -14,7 +14,7 @@ This article will show you how to solve this from the command line.
 
 ### 2. Generating Maven Tree
 
-To print the dependency tree of a Maven pom, you can run the following comman:
+To print the dependency tree of a Maven pom, you can run the following command:
 
 ```
 $ mvn dependency:tree
